@@ -57,4 +57,14 @@ pip install -r requirements.txt
 
 streamlit run streamlit_upload_app.py
 
+## Performance Evaluation
+
+Evaluated retrieval performance using manually created question-answer pairs.
+
+| Metric | Value |
+|----------|----------|
+| Questions Tested | 20 |
+| Correct Retrievals | 19 |
+| Retrieval Accuracy | 95% |
+
 
