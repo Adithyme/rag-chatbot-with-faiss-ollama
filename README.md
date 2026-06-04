@@ -57,8 +57,4 @@ pip install -r requirements.txt
 
 streamlit run streamlit_upload_app.py
 
-## Application Preview
 
-![Upload](screenshots/upload_page.png)
-
-![Chat](screenshots/answer_page.png)
