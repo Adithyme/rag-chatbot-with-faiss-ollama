@@ -1,13 +1,13 @@
-# 📚 PDF RAG Chatbot with FastAPI, FAISS & LLM (Split Architecture)
+#  PDF RAG Chatbot with FastAPI, FAISS & LLM (Split Architecture)
 
 A Retrieval-Augmented Generation (RAG) system for querying PDF documents using **LangChain, FAISS, HuggingFace embeddings, and Mistral LLM**, with a **split architecture design**:
 
-- 🧠 Core RAG system runs locally (heavy ML workload)
-- 🌐 FastAPI backend deployed on AWS EC2 (lightweight API layer)
+-  Core RAG system runs locally (heavy ML workload)
+-  FastAPI backend deployed on AWS EC2 (lightweight API layer)
 
 ---
 
-# 🚀 Project Overview
+#  Project Overview
 
 This project is a **PDF-based Question Answering system** that allows users to upload documents and ask natural language questions.
 
@@ -21,9 +21,9 @@ Due to infrastructure constraints (AWS Free Tier), the system is designed using 
 
 ---
 
-# 🧠 System Architecture
+#  System Architecture
 
-## 🟢 Level 1 — Local RAG System (Core AI Engine)
+##  Level 1 — Local RAG System (Core AI Engine)
 
 This part runs locally due to heavy ML dependencies.
 
@@ -45,7 +45,7 @@ Final Answer Generation
 
 
 
-### 🧰 Technologies Used (Local)
+###  Technologies Used (Local)
 - LangChain
 - FAISS
 - HuggingFace Sentence Transformers
@@ -55,7 +55,7 @@ Final Answer Generation
 
 ---
 
-## ☁️ Level 2 — FastAPI Deployment Layer (AWS EC2)
+##  Level 2 — FastAPI Deployment Layer (AWS EC2)
 
 This layer exposes a lightweight API interface for the system.
 
@@ -72,7 +72,7 @@ Lightweight processing / API handling
 JSON response returned
 
 
-### 🧰 Technologies Used (Cloud)
+###  Technologies Used (Cloud)
 - FastAPI
 - Uvicorn
 - AWS EC2 (Ubuntu)
@@ -81,16 +81,16 @@ JSON response returned
 
 ---
 
-# ⚙️ Features
+#  Features
 
-## 🧠 Local RAG System
+##  Local RAG System
 - Upload and process PDF documents
 - Intelligent text chunking
 - Semantic search using FAISS
 - Context-aware answers using Mistral LLM
 - Streamlit-based interactive UI
 
-## 🌐 FastAPI Cloud Layer
+##  FastAPI Cloud Layer
 - REST API endpoints
 - `/health` → system status check
 - `/ask` → question answering endpoint
@@ -98,7 +98,7 @@ JSON response returned
 
 ---
 
-# 📡 API Endpoints (FastAPI)
+#  API Endpoints (FastAPI)
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -108,16 +108,16 @@ JSON response returned
 
 ---
 
-# 🏗️ Tech Stack
+#  Tech Stack
 
-## 🧠 Machine Learning / RAG
+##  Machine Learning / RAG
 - LangChain
 - FAISS
 - HuggingFace Transformers
 - Sentence Transformers (MiniLM)
 - Ollama (Mistral LLM)
 
-## 🌐 Backend / Deployment
+##  Backend / Deployment
 - FastAPI
 - Uvicorn
 - AWS EC2 (Ubuntu)
@@ -126,7 +126,7 @@ JSON response returned
 
 ---
 
-# 🚀 Deployment Architecture
+#  Deployment Architecture
 
             ┌──────────────────────┐
             │  Streamlit (Local)   │
@@ -149,27 +149,27 @@ JSON response returned
 
 ---
 
-# 💡 Why This Architecture?
+#  Why This Architecture?
 
 This hybrid design was implemented due to:
 
-- ⚠️ AWS Free Tier limitations (CPU, RAM constraints)
-- ⚠️ Heavy ML dependencies (FAISS, Transformers, LLMs)
-- 🟢 Need to demonstrate real-world MLOps architecture
+-  AWS Free Tier limitations (CPU, RAM constraints)
+-  Heavy ML dependencies (FAISS, Transformers, LLMs)
+-  Need to demonstrate real-world MLOps architecture
 
 It reflects a **production-style separation of concerns** between ML and deployment layers.
 
 ---
 
-# 🧪 Skills Demonstrated
+#  Skills Demonstrated
 
-## 🧠 Machine Learning / AI
+##  Machine Learning / AI
 - Retrieval-Augmented Generation (RAG)
 - Vector similarity search
 - Embedding-based retrieval
 - LLM integration
 
-## 🌐 Software Engineering / MLOps
+##  Software Engineering / MLOps
 - REST API development using FastAPI
 - AWS EC2 deployment
 - Linux server setup
@@ -178,7 +178,7 @@ It reflects a **production-style separation of concerns** between ML and deploym
 
 ---
 
-# 📌 How to Run (Local RAG System)
+#  How to Run (Local RAG System)
 
 ```bash
 pip install -r requirements.txt
@@ -186,14 +186,14 @@ streamlit run streamlit_upload_app.py
 
 uvicorn backend.main:app --host 0.0.0.0 --port 8000
 
-📈 Future Improvements
+Future Improvements
 Full cloud-based RAG deployment (GPU EC2)
 Docker containerization
 CI/CD pipeline using GitHub Actions
 Replace FAISS with managed vector DB (Pinecone / Weaviate)
 Unified FastAPI + RAG integration on scalable infrastructure
 
-🧠 Summary
+Summary
 
 This project demonstrates a real-world RAG system architecture combining:
 
